@@ -1,5 +1,26 @@
 <h1><%= @track.name %></h1>
 
-<button type="button"><%= link_to "Return to tracks", tracks_path %></button>
+<% if @track.courses.any? %>
+  <h4>Here are the courses for this track:</h4>
 
-<button type="button"><%= link_to "Edit Track Name", edit_track_path %></button>
+  <ol>
+    <% @track.courses.each do |course| %>
+      <li>
+        <%= course.name %> |
+        <%= link_to "Edit", edit_track_course_path(@track, course) %> |
+        <%= link_to "Delete", track_course_path(@track, course),
+                                 :data => {:confirm => "Are you sure?",
+                                                :method => "delete"} %>
+      </li>
+    <% end %>
+  </ol>
+<% else %>
+  <p>There are no courses yet!</p>
+<% end %>
+
+<p><%= link_to "Add a course", new_track_course_path(@track) %></p>
+<p><%= link_to "Delete List", track_path(@track),
+                        :data => {:confirm => "Are you sure?",
+                                       :method => "delete"} %></p>
+
+<p><%= link_to "Return to tracks", tracks_path %></p>

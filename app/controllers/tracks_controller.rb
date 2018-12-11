@@ -35,7 +35,14 @@ class TracksController < ApplicationController
     else
       render :edit
     end
-  end 
+  end
+
+  def destroy
+  @track = Track.find(params[:id])
+  @track.destroy
+  redirect_to tracks_path
+end
+
 
   private
     def track_params

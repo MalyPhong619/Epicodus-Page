@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Track do
+describe Course do
   it { should validate_presence_of :name }
-  it { should have_many :courses }
+  it { should belong_to :track }
 end
