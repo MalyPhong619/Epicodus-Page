@@ -1,0 +1,16 @@
+<h1>Edit Track Name</h1>
+
+<% if @track.errors.any? %>
+<h3>Please fix these errors:</h3>
+
+<ul>
+  <% @track.errors.full_message.each do |message| %>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_for @track do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
