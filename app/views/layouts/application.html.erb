@@ -9,22 +9,21 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"></button>
-          <a class="navbar-brand" href="/tracks">Tracks</a>
-        </div>
-        <div class="inner-addon right-addon">
-          <input type="text" class="form-control" placeholder="Search">
-          <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span></button>
-        </div>
-      </div>
-    </nav>
+    <nav class="navbar navbar-light">
+    <a href="https://www.learnhowtoprogram.com/tracks" class="navbar-brand">Tracks</a>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
 
     <div class="container">
       <div id="mainbody">
         <%= yield %>
+      </div>
+      <div class="bottom-footer">
+        <img id="epicodusLogo" src="https://static1.squarespace.com/static/5524448ee4b0d6f6b83ab9e2/t/57cf3de246c3c4d2933aa57c/1529949737992/?format=1500w" alt="epicodus logo">
+        <p>© 2018 <a href="https://www.learnhowtoprogram.com/tracks">Epicodus</a> , Inc.</p>
       </div>
     </div>
   </body>

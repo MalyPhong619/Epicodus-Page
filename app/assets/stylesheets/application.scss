@@ -1,10 +1,35 @@
 
  @import "bootstrap";
 
-body {
+body, h1 {
   background-color: #fcfcfc;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-weight: 250;
 }
 
 #mainbody {
-  margin-top: 100px;
+  margin-top: 50px;
+}
+
+.bottom-footer {
+  margin-top: 50px;
+  text-align: center;
+  align-content: center;
+}
+
+img {
+    width: 200px;
+}
+
+p {
+  font-size: 1.7rem;
+  // font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+a {
+  color: #d9230f;
+}
+
+.searchbar {
+  width: 250px;
 }
