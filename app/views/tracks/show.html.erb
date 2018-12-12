@@ -6,7 +6,7 @@
   <ol>
     <% @track.courses.each do |course| %>
       <li>
-        <%= course.name %> |
+      <a href="/courses/<%= course.id %>/lessons/">  <%= course.name %> </a>|
         <%= link_to "Edit", edit_track_course_path(@track, course) %> |
         <%= link_to "Delete", track_course_path(@track, course),
                                  :data => {:confirm => "Are you sure?",
